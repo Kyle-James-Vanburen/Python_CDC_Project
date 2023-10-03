@@ -2,13 +2,22 @@
 
 ## Created an in-depth notebook project by coding and visualizing with Python to help provide valuable insights to the CDC. 
 
-Employing t-tests, Pearson correlation tests, and the computation of confidence intervals, I conducted analyses to assess means, correlations, and distinctions across various groups.
+1. First, the CDC would like to know if theres any difference on overdose death rates between different drug types.
 
-This Jupyter Notebook provides an analysis of drug overdose death rates based on different factors, including drug types and gender.
+2. And second, the CDC wants to know if genders (male or female) in fact do have an impact on overdose death rates.
+
+With employing t-tests, Pearson correlation tests, and the computation of confidence intervals, I conducted analyses to assess means, correlations, and distinctions across various groups.
+
+My Jupyter Notebook provides an analysis of drug overdose death rates based on different factors, including drug types and gender.
 The analysis involves data sourced from the CDC (Centers for Disease Control and Prevention) and employs statistical tests to draw conclusions regarding drug overdose deaths.
 
 
-## IMPORTANT: Data Source
+## IMPORTANT: Data Source and Software
+
+INSTALLING ANACONDA STEPS: https://www.geeksforgeeks.org/how-to-install-conda-in-windows/
+
+INSTALLING JUPYTER NOTEBOOK USING ANACONDA STEPS: https://www.geeksforgeeks.org/how-to-install-jupyter-notebook-in-windows/
+
 This analysis uses data from the CDC, which can be accessed via the following link:
 https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
 
