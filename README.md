@@ -24,19 +24,19 @@ https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
 1. To begin, make sure to install the necessary libraries by running the following imports in the command prompt bar: import pandas as pd
  from scipy import stats
 
-  from scipy.stats.stats import ttest_ind
+       from scipy.stats.stats import ttest_ind
  
-  import matplotlib.pyplot as plt
+       import matplotlib.pyplot as plt
  
-  import seaborn as sns
+       import seaborn as sns
  
-  %matplotlib inline
+       %matplotlib inline
 
-  sns.set()
+       sns.set()
  
-  import warnings
+       import warnings
  
-   warnings.filterwarnings("ignore")
+       warnings.filterwarnings("ignore")
 
 3. The data is loaded into a Pandas DataFrame using the read_csv function: df = pd.read_csv('Drug_overdose_death_rates__by_drug_type__sex__age__race__and_Hispanic_origin__United_States.csv')
 
