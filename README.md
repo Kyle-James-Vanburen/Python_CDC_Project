@@ -75,3 +75,5 @@ Summarize the findings for each hypothesis, including statistical results and co
 ### Hypothesis #2
 - Result: There is a significant difference in death rates between genders, with males having higher rates.
 - Conclusion: Null hypothesis is rejected.
+
+CONTACT: If you have any questions or need further assistance, please feel free to contact the project maintainer at vanburen.kyle@yahoo.com.
