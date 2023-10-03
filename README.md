@@ -57,47 +57,33 @@ The analysis utilizes data from the CDC, which can be accessed via this link: ht
 • Conclusion: Null hypothesis is supported.
 
 
+## Hypothesis #2: Gender and Death Rates
+
+**Analysis Steps:**
+
+• Data is separated into Male and Female datasets.
+
+• Independent samples t-test is performed to test if there's a significant difference in death rates between Male and Female.
+
 3. The data is loaded into a Pandas DataFrame using the read_csv function:
 
-       df = pd.read_csv('Drug_overdose_death_rates__by_drug_type__sex__age__race__and_Hispanic_origin__United_States.csv')
+**Example T-Test:**
 
-5. Data Inspection - You can check the columns of the dataset using: df.columns
+    stats.ttest_ind(male_deaths_df['ESTIMATE'], female_deaths_df['ESTIMATE'])
 
-6. Handling Missing Values - The FLAG column's NaN values are filled with 'NO', and the ESTIMATE column's NaN values are filled with 0:
+**Conclusion**
 
-       df['FLAG'] = df['FLAG'].fillna('NO')
-       df['ESTIMATE'] = df['ESTIMATE'].fillna(0)
+• Result: There is a significant difference in death rates between genders, with males having higher rates.
 
-## Hypothesis #1: Correlation between Drug Types
+• Conclusion: Null hypothesis is rejected.
 
-5. Analysis:
-- Three drug types are selected: Methadone, Heroin, and Synthetic Opioids.
-- Data for each drug type is extracted and combined into a new DataFrame.
-- T-tests are conducted to compare the death rates for each drug pair.
-- Pearson correlation is calculated to assess the correlation between these drug types
-- Example t-test
-  
-      print(stats.ttest_ind(pivoted_df['Methadone'], pivoted_df['Heroin']))
-
-
-
-## Hypothesis #2: Gender and Death Rates
-6. Analysis:
- - Data is separated into Male and Female datasets.
- - Independent samples t-test is performed to test if there's a significant difference in death rates between Male and Female.
- - Example t-test
-   
-       stats.ttest_ind(male_deaths_df['ESTIMATE'], female_deaths_df['ESTIMATE'])
-
-  
 ## Summary of Findings
-Summarize the findings for each hypothesis, including statistical results and conclusions : 
 ### Hypothesis #1
-- Result: There is no significant correlation between death rates for different drug types.
-- Conclusion: Null hypothesis is supported.
+
+• There is no significant correlation between death rates for different drug types.
 
 ### Hypothesis #2
-- Result: There is a significant difference in death rates between genders, with males having higher rates.
-- Conclusion: Null hypothesis is rejected.
+
+• There is a significant difference in death rates between genders, with males having higher rates.
 
 CONTACT: If you have any questions or need further assistance, please feel free to contact the project maintainer at vanburen.kyle@yahoo.com.
