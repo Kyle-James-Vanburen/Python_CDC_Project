@@ -87,6 +87,5 @@ The analysis utilizes data from the CDC, which can be accessed via this link: ht
 
 
 
-### CONTACT: ###
-
+## Contact: ##
 If you have any questions or need further assistance, please feel free to contact the project maintainer at vanburen.kyle@yahoo.com.
