@@ -2,7 +2,7 @@
 
 **Introduction:**
 
-The Python_CDC_Project is an in-depth notebook project created to analyze drug overdose death rates using Python. This project provides valuable insights for the CDC (Centers for Disease Control and Prevention) by exploring differences in overdose death rates based on different drug types and gender.
+The CDC Project is an in-depth notebook project created to analyze drug overdose death rates using Python. This project provides valuable insights for the CDC (Centers for Disease Control and Prevention) by exploring differences in overdose death rates based on different drug types and gender.
 
 ## Data Source and Software
 
