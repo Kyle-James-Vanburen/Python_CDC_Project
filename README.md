@@ -21,7 +21,7 @@ INSTALLING JUPYTER NOTEBOOK USING ANACONDA STEPS: https://www.geeksforgeeks.org/
 This analysis uses data from the CDC, which can be accessed via the following link:
 https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
 
-1. To begin, make sure to install the necessary libraries by running the following imports: import pandas as pd
+1. To begin, make sure to install the necessary libraries by running the following imports in the command prompt bar: import pandas as pd
  from scipy import stats
 
   from scipy.stats.stats import ttest_ind
