@@ -86,5 +86,6 @@ The analysis utilizes data from the CDC, which can be accessed via this link: ht
 • There is a significant difference in death rates between genders, with males having higher rates.
 
 
-### **CONTACT:** ### 
+
+**CONTACT:** 
 If you have any questions or need further assistance, please feel free to contact the project maintainer at vanburen.kyle@yahoo.com.
