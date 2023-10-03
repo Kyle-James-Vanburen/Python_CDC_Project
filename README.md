@@ -38,13 +38,16 @@ https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
  
        warnings.filterwarnings("ignore")
 
-3. The data is loaded into a Pandas DataFrame using the read_csv function: df = pd.read_csv('Drug_overdose_death_rates__by_drug_type__sex__age__race__and_Hispanic_origin__United_States.csv')
+3. The data is loaded into a Pandas DataFrame using the read_csv function:
 
-4. Data Inspection - You can check the columns of the dataset using: df.columns
+       df = pd.read_csv('Drug_overdose_death_rates__by_drug_type__sex__age__race__and_Hispanic_origin__United_States.csv')
 
-5. Handling Missing Values - The FLAG column's NaN values are filled with 'NO', and the ESTIMATE column's NaN values are filled with 0:
- df['FLAG'] = df['FLAG'].fillna('NO')
- df['ESTIMATE'] = df['ESTIMATE'].fillna(0)
+5. Data Inspection - You can check the columns of the dataset using: df.columns
+
+6. Handling Missing Values - The FLAG column's NaN values are filled with 'NO', and the ESTIMATE column's NaN values are filled with 0:
+
+       df['FLAG'] = df['FLAG'].fillna('NO')
+       df['ESTIMATE'] = df['ESTIMATE'].fillna(0)
 
 ## Hypothesis #1: Correlation between Drug Types
 
@@ -54,7 +57,8 @@ https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
 - T-tests are conducted to compare the death rates for each drug pair.
 - Pearson correlation is calculated to assess the correlation between these drug types
 - Example t-test
-print(stats.ttest_ind(pivoted_df['Methadone'], pivoted_df['Heroin']))
+  
+      print(stats.ttest_ind(pivoted_df['Methadone'], pivoted_df['Heroin']))
 
 
 
@@ -63,7 +67,8 @@ print(stats.ttest_ind(pivoted_df['Methadone'], pivoted_df['Heroin']))
  - Data is separated into Male and Female datasets.
  - Independent samples t-test is performed to test if there's a significant difference in death rates between Male and Female.
  - Example t-test
-  stats.ttest_ind(male_deaths_df['ESTIMATE'], female_deaths_df['ESTIMATE'])
+   
+       stats.ttest_ind(male_deaths_df['ESTIMATE'], female_deaths_df['ESTIMATE'])
 
   
 ## Summary of Findings
