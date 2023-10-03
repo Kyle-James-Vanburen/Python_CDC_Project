@@ -1,42 +1,61 @@
 # Python_CDC_Project
 
-## Created an in-depth notebook project by coding and visualizing with Python to help provide valuable insights to the CDC. 
+**Introduction:**
 
-1. First, the CDC would like to know if theres any difference on overdose death rates between different drug types.
+The Python_CDC_Project is an in-depth notebook project created to analyze drug overdose death rates using Python. This project provides valuable insights for the CDC (Centers for Disease Control and Prevention) by exploring differences in overdose death rates based on different drug types and gender.
 
-2. And second, the CDC wants to know if genders (male or female) in fact do have an impact on overdose death rates.
+## Data Source and Software
 
-With employing t-tests, Pearson correlation tests, and the computation of confidence intervals, I conducted analyses to assess means, correlations, and distinctions across various groups.
+**Installing Anaconda:**
 
-My Jupyter Notebook provides an analysis of drug overdose death rates based on different factors, including drug types and gender.
-The analysis involves data sourced from the CDC (Centers for Disease Control and Prevention) and employs statistical tests to draw conclusions regarding drug overdose deaths.
+Follow the steps in this guide to install Anaconda on your system: https://www.geeksforgeeks.org/how-to-install-conda-in-windows/
 
+**Installing Jupyter Notebook using Anaconda:**
 
-## IMPORTANT: Data Source and Software
+Refer to this guide for installing Jupyter Notebook through Anaconda: https://www.geeksforgeeks.org/how-to-install-jupyter-notebook-in-windows/
 
-INSTALLING ANACONDA STEPS: https://www.geeksforgeeks.org/how-to-install-conda-in-windows/
+**Data Source:**
 
-INSTALLING JUPYTER NOTEBOOK USING ANACONDA STEPS: https://www.geeksforgeeks.org/how-to-install-jupyter-notebook-in-windows/
+The analysis utilizes data from the CDC, which can be accessed via this link: https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
 
-This analysis uses data from the CDC, which can be accessed via the following link:
-https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD
+**Required Libraries:**
 
-1. To begin, make sure to install the necessary libraries by running the following imports in the command prompt bar: import pandas as pd
- from scipy import stats
+    import pandas as pd
+    from scipy import stats
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    %matplotlib inline
+    sns.set()
+    import warnings
+    warnings.filterwarnings("ignore")
 
-       from scipy.stats.stats import ttest_ind
- 
-       import matplotlib.pyplot as plt
- 
-       import seaborn as sns
- 
-       %matplotlib inline
+## Data Inspection and Cleaning
 
-       sns.set()
- 
-       import warnings
- 
-       warnings.filterwarnings("ignore")
+• The dataset is loaded into a Pandas DataFrame using the read_csv function.
+• Missing values in the 'FLAG' column are filled with 'NO', and NaN values in the 'ESTIMATE' column are filled with 0.
+
+## Hypothesis #1: Correlation between Drug Types
+
+**Analysis Steps:**
+
+• Three drug types are selected: Methadone, Heroin, and Synthetic Opioids.
+
+• Data for each drug type is extracted and combined into a new DataFrame.
+
+• T-tests are conducted to compare the death rates for each drug pair.
+
+• Pearson correlation is calculated to assess the correlation between these drug types.
+
+**Example T-Test:**
+
+    print(stats.ttest_ind(pivoted_df['Methadone'], pivoted_df['Heroin']))
+
+**Conclusion:**
+
+• Result: There is no significant correlation between death rates for different drug types.
+
+• Conclusion: Null hypothesis is supported.
+
 
 3. The data is loaded into a Pandas DataFrame using the read_csv function:
 
