@@ -66,8 +66,6 @@ The analysis utilizes data from the CDC, which can be accessed via this link: ht
 
 • Independent samples t-test is performed to test if there's a significant difference in death rates between Male and Female.
 
-3. The data is loaded into a Pandas DataFrame using the read_csv function:
-
 **Example T-Test:**
 
     stats.ttest_ind(male_deaths_df['ESTIMATE'], female_deaths_df['ESTIMATE'])
